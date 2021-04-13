@@ -18,11 +18,35 @@
 // console.log(newArray);
 
 // bai 1, khong dung slice
-var array = [11, 2, 8, 10, 5, 99, 1, 8, 9];
-var newArray = [];
-var n = array.length;
-var m = n / 3;
-for (var i = 0; i < m; i++) {
-    newArray.push(array[i], array[(i + m)], array[(2 * m)])
+// var array = [11, 2, 8, 10, 5, 99, 1, 8, 9];
+// var newArray = [];
+// var n = array.length;
+// var m = n / 3;
+// for (var i = 0; i < m; i++) {
+//     newArray.push(array[i], array[(i + m)], array[(2 * m)])
+// }
+// console.log(newArray);
+
+// bai 2
+var array = [0, 100, -4, 8, 143, 5, 99, 100]
+var soLon1, soLon2;
+soLon1 = array[1];
+soLon2 = array[1];
+var sum;
+for (var i = 0; i < array.length; i++) {
+    if (soLon1 < array[i + 1]) {
+        soLon1 = array[i + 1];
+    }
 }
-console.log(newArray);
+console.log(soLon1);
+
+for (var i = 0; i < array.length; i++) {
+    if (soLon2 < array[i + 1]) {
+        if (array[i + 1] !== soLon1) {
+            soLon2 = array[i + 1];
+        }
+    }
+}
+console.log(soLon2);
+sum = soLon1 + soLon2;
+console.log(sum);
