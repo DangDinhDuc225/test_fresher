@@ -30,8 +30,8 @@
 // bai 2
 var array = [0, 100, -4, 8, 143, 5, 99, 100]
 var soLon1, soLon2;
-soLon1 = array[1];
-soLon2 = array[1];
+soLon1 = array[0];
+soLon2 = array[0];
 var sum;
 for (var i = 0; i < array.length; i++) {
     if (soLon1 < array[i + 1]) {
@@ -50,3 +50,5 @@ for (var i = 0; i < array.length; i++) {
 console.log(soLon2);
 sum = soLon1 + soLon2;
 console.log(sum);
+
+// bai 3
