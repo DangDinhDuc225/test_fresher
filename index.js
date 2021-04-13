@@ -28,22 +28,33 @@
 // console.log(newArray);
 
 // bai 2
-var array = [0, 100, -4, 8, 143, 5, 99, 100]
+var array = [0, 100, -4, 100, 100, 5, 100, 100]
 var soLon1, soLon2;
 soLon1 = array[0];
 soLon2 = array[0];
 var sum;
+var n = 0;
 for (var i = 0; i < array.length; i++) {
     if (soLon1 < array[i + 1]) {
         soLon1 = array[i + 1];
     }
 }
-console.log(soLon1);
-
+console.log(soLon1)
 for (var i = 0; i < array.length; i++) {
-    if (soLon2 < array[i + 1]) {
-        if (array[i + 1] !== soLon1) {
-            soLon2 = array[i + 1];
+    if (soLon1 === array[i]) {
+        n = n + 1;
+    }
+}
+console.log(n);
+
+if (n > 1) {
+    soLon2 = soLon1;
+} else {
+    for (var i = 0; i < array.length; i++) {
+        if (soLon2 < array[i + 1]) {
+            if (array[i + 1] !== soLon1) {
+                soLon2 = array[i + 1];
+            }
         }
     }
 }
